@@ -15,24 +15,26 @@ Flutter app dev utils by blodely(indie.luo@gmail.com).
 
 ## Features
 
-TODO: List what your package can do. Maybe include images, gifs, or videos.
+App Dev Utility.
 
 ## Getting started
 
-TODO: List prerequisites and provide or point to information on how to
-start using the package.
+Just run `flutter pub add ly_flutter_utils` at project root.
 
 ## Usage
 
-TODO: Include short and useful examples for package users. Add longer examples
-to `/example` folder. 
+Example: outline a widget for debug purpose,
 
 ```dart
-const like = 'sample';
+DebugBorder(
+  child: Container(),
+)
 ```
 
 ## Additional information
 
-TODO: Tell users more about the package: where to find more information, how to 
-contribute to the package, how to file issues, what response they can expect 
-from the package authors, and more.
+License: MIT,
+
+Author: [Luo Yu](https://open.luoyu.space), email: [luoyu@luoyu.space](mailto:luoyu@luoyu.space)
+
+<br><br>
