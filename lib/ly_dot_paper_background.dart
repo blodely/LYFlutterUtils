@@ -3,8 +3,15 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
 class LYDotPaperBackground extends StatelessWidget {
+  final bool? safeTop;
+  final bool? safeBottom;
   final Widget? child;
-  const LYDotPaperBackground({super.key, this.child});
+  const LYDotPaperBackground({
+    super.key,
+    this.safeTop,
+    this.safeBottom,
+    this.child,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -29,7 +36,11 @@ class LYDotPaperBackground extends StatelessWidget {
           alignment: Alignment.topLeft,
         ),
       ),
-      child: child,
+      child: SafeArea(
+        top: safeTop ?? false,
+        bottom: safeBottom ?? false,
+        child: child ?? Container(),
+      ),
     );
   }
 }
