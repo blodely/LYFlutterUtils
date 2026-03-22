@@ -70,8 +70,15 @@ class LYTitleBar extends StatelessWidget implements PreferredSizeWidget {
 class LYTitleBarButton extends StatelessWidget {
   final double? width;
   final IconData? icon;
+  final double? iconSize;
   final VoidCallback? ontap;
-  const LYTitleBarButton({super.key, this.width, this.icon, this.ontap});
+  const LYTitleBarButton({
+    super.key,
+    this.width,
+    this.icon,
+    this.iconSize,
+    this.ontap,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -86,7 +93,10 @@ class LYTitleBarButton extends StatelessWidget {
         child: Container(
           width: width ?? 44,
           alignment: Alignment.center,
-          child: Icon(icon, size: ((width ?? 44) / 3).truncateToDouble()),
+          child: Icon(
+            icon,
+            size: iconSize ?? ((width ?? 44) * 0.8).truncateToDouble(),
+          ),
         ),
       ),
     );
