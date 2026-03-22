@@ -26,9 +26,9 @@ class LYTitleBar extends StatelessWidget implements PreferredSizeWidget {
                 mainAxisAlignment: MainAxisAlignment.start,
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
-                  // LEFT Padding
-                  SizedBox(width: 15),
-
+                  Navigator.canPop(context) == true
+                      ? BackButton()
+                      : SizedBox(width: 15), // LEFT Padding
                   // TITLE
                   Text(
                     '$title',
