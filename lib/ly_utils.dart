@@ -4,14 +4,14 @@ import 'package:flutter/material.dart';
 
 export 'debug_border.dart';
 
-class LYFlutterUtils {
+class LYUtils {
   // Singleton
-  static final LYFlutterUtils _kit = LYFlutterUtils._internal();
-  static LYFlutterUtils get kit => _kit;
-  LYFlutterUtils._internal();
+  static final LYUtils _kit = LYUtils._internal();
+  static LYUtils get kit => _kit;
+  LYUtils._internal();
 
   // Theme brightness status
-  bool isThemeLight(BuildContext context) {
+  bool isLight(BuildContext context) {
     return Theme.of(context).brightness == Brightness.light;
   }
 }
