@@ -1,8 +1,12 @@
+## 0.1.1
+
+* Add title bar with glassmorphism effect.
+
 ## 0.1.0
 
-Add Glass Container widget.
-Add Dot Paper style background widget.
-flutter 3.
+* Add Glass Container widget.
+* Add Dot Paper style background widget.
+* flutter 3.
 
 ## 0.0.2
 
