@@ -3,7 +3,8 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
 class LYDotPaperBackground extends StatelessWidget {
-  const LYDotPaperBackground({super.key});
+  final Widget? child;
+  const LYDotPaperBackground({super.key, this.child});
 
   @override
   Widget build(BuildContext context) {
@@ -28,6 +29,7 @@ class LYDotPaperBackground extends StatelessWidget {
           alignment: Alignment.topLeft,
         ),
       ),
+      child: child,
     );
   }
 }
