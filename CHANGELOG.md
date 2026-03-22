@@ -1,4 +1,4 @@
-## 0.1.9
+## 0.1.10
 
 * Add title bar with glassmorphism effect.
 * Add title bar button.
