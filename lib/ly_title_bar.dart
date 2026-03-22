@@ -65,3 +65,30 @@ class LYTitleBar extends StatelessWidget implements PreferredSizeWidget {
   @override
   Size get preferredSize => Size.fromHeight(kToolbarHeight);
 }
+
+// BAR BUTTON
+class LYTitleBarButton extends StatelessWidget {
+  final double? width;
+  final IconData? icon;
+  final VoidCallback? ontap;
+  const LYTitleBarButton({super.key, this.width, this.icon, this.ontap});
+
+  @override
+  Widget build(BuildContext context) {
+    return GestureDetector(
+      onTap:
+          ontap ??
+          () {
+            debugPrint('LYTitleBarButton PRESSED.');
+          },
+      child: Container(
+        decoration: BoxDecoration(),
+        child: Container(
+          width: width ?? 44,
+          alignment: Alignment.center,
+          child: Icon(icon, size: ((width ?? 44) / 3).truncateToDouble()),
+        ),
+      ),
+    );
+  }
+}
