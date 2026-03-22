@@ -1,7 +1,7 @@
 name: ly_flutter_utils
 description: Flutter utils package project.
 version: 0.1.0
-publish_to: https://pub.dev
+# publish_to: https://pub.dev
 homepage: https://github.com/blodely/LYFlutterUtils
 
 environment:
