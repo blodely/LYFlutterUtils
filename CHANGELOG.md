@@ -1,7 +1,8 @@
-## 0.1.5
+## 0.1.6
 
 * Add title bar with glassmorphism effect.
 * Add title bar button.
+* Modify dot paper background widget with safe area.
 
 ## 0.1.0
 
