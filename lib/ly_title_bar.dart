@@ -3,12 +3,12 @@ import 'package:ly_flutter_utils/ly_utils.dart';
 
 class LYTitleBar extends StatelessWidget implements PreferredSizeWidget {
   final String? title;
-  // final bool? showBackButton;
+  final double? backButtonIconSize;
   final List<Widget>? rightButtons;
   const LYTitleBar({
     super.key,
     this.title,
-    // this.showBackButton,
+    this.backButtonIconSize,
     this.rightButtons,
   });
 
@@ -32,7 +32,6 @@ class LYTitleBar extends StatelessWidget implements PreferredSizeWidget {
                 mainAxisAlignment: MainAxisAlignment.start,
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
-                  // showBackButton ?? false
                   Navigator.canPop(context)
                       ? LYTitleBarButton(
                         // NAV BACK BUTTON
@@ -40,6 +39,7 @@ class LYTitleBar extends StatelessWidget implements PreferredSizeWidget {
                           Navigator.pop(context);
                         },
                         icon: Icons.arrow_back,
+                        iconSize: backButtonIconSize,
                       )
                       : SizedBox(width: 15), // LEFT Padding
                   // TITLE
