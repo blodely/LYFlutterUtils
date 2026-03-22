@@ -24,32 +24,35 @@ class LYGlassContainer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ClipRRect(
-      borderRadius: BorderRadius.circular(cornerRadius ?? 0),
-      child: BackdropFilter(
-        // blur bg
-        filter: ImageFilter.blur(sigmaX: sigma ?? 7, sigmaY: sigma ?? 7),
+    return Container(
+      margin: margin,
+      child: ClipRRect(
+        borderRadius: BorderRadius.circular(cornerRadius ?? 0),
+        child: BackdropFilter(
+          // blur bg
+          filter: ImageFilter.blur(sigmaX: sigma ?? 7, sigmaY: sigma ?? 7),
 
-        child: Container(
-          width: width,
-          height: height,
-          margin: margin,
-          decoration: BoxDecoration(
-            color:
-                LYUtils.kit.isLight(context)
-                    ? const Color(0xfff3f3f3).withValues(alpha: 0.12)
-                    : const Color(0xff3a3a3a).withValues(alpha: 0.12),
-            borderRadius: BorderRadius.circular(cornerRadius ?? 25),
-            border: Border.all(
+          child: Container(
+            width: width,
+            height: height,
+            // margin: margin,
+            decoration: BoxDecoration(
               color:
                   LYUtils.kit.isLight(context)
-                      ? Colors.grey.withValues(alpha: 0.2)
-                      : const Color(0xff5a5a5a).withValues(alpha: 0.2),
-              width: borderWidth ?? 1.2,
+                      ? const Color(0xfff3f3f3).withValues(alpha: 0.12)
+                      : const Color(0xff3a3a3a).withValues(alpha: 0.12),
+              borderRadius: BorderRadius.circular(cornerRadius ?? 0),
+              border: Border.all(
+                color:
+                    LYUtils.kit.isLight(context)
+                        ? Colors.grey.withValues(alpha: 0.2)
+                        : const Color(0xff5a5a5a).withValues(alpha: 0.2),
+                width: borderWidth ?? 1.2,
+              ),
             ),
+            clipBehavior: Clip.antiAlias,
+            child: child,
           ),
-          clipBehavior: Clip.antiAlias,
-          child: child,
         ),
       ),
     );
