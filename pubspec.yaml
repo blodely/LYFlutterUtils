@@ -1,11 +1,11 @@
 name: ly_flutter_utils
 description: Flutter utils package project.
-version: 0.0.2
+version: 0.1.0
 homepage: https://github.com/blodely/LYFlutterUtils
 
 environment:
   sdk: ^3.7.2
-  flutter: ">=1.17.0"
+  flutter: ">=3.0.0"
 
 dependencies:
   flutter:
@@ -14,7 +14,7 @@ dependencies:
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  flutter_lints: ^5.0.0
+  flutter_lints: ^6.0.0
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
