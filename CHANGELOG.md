@@ -10,7 +10,7 @@
 
 ## 0.0.2
 
-Add debug outline widget.
+* Add debug outline widget.
 
 ## 0.0.1
 

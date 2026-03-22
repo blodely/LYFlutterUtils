@@ -9,6 +9,12 @@ class LYTitleBar extends StatelessWidget implements PreferredSizeWidget {
   @override
   Widget build(BuildContext context) {
     return LYGlassContainer(
+      sigma: 16,
+
+      // REMOVE DEFAULT VALUES
+      cornerRadius: 0,
+      borderWidth: 0,
+
       child: SafeArea(
         child: Stack(
           alignment: AlignmentDirectional.bottomCenter,
