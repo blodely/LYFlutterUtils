@@ -18,4 +18,16 @@ class LYUtils {
   bool isLight(BuildContext context) {
     return Theme.of(context).brightness == Brightness.light;
   }
+
+  double width(BuildContext context) {
+    return MediaQuery.of(context).size.width;
+  }
+
+  double height(BuildContext context) {
+    return MediaQuery.of(context).size.height;
+  }
+
+  Size size(BuildContext context) {
+    return MediaQuery.of(context).size;
+  }
 }
