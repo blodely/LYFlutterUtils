@@ -1,6 +1,7 @@
-## 0.1.11
+## 0.1.12
 
 * Utils: Screen size.
+* Utils: Safe area padding.
 
 ## 0.1.9
 
