@@ -18,6 +18,12 @@ class LYUtils {
   bool isLight(BuildContext context) {
     return Theme.of(context).brightness == Brightness.light;
   }
+}
+
+extension Screen on LYUtils {
+  Size size(BuildContext context) {
+    return MediaQuery.of(context).size;
+  }
 
   double width(BuildContext context) {
     return MediaQuery.of(context).size.width;
@@ -27,7 +33,15 @@ class LYUtils {
     return MediaQuery.of(context).size.height;
   }
 
-  Size size(BuildContext context) {
-    return MediaQuery.of(context).size;
+  EdgeInsets padding(BuildContext context) {
+    return MediaQuery.of(context).padding;
+  }
+
+  double safeTop(BuildContext context) {
+    return MediaQuery.of(context).padding.top;
+  }
+
+  double safeBtm(BuildContext context) {
+    return MediaQuery.of(context).padding.bottom;
   }
 }
