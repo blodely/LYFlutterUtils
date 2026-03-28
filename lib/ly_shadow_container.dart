@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ly_flutter_utils/ly_utils.dart';
 
 class LYShadowContainer extends StatelessWidget {
   final Widget? child;
@@ -24,7 +25,11 @@ class LYShadowContainer extends StatelessWidget {
         borderRadius: BorderRadius.circular(borderRadius),
         boxShadow: [
           BoxShadow(
-            color: shadowColor ?? Colors.black.withValues(alpha: 0.14),
+            color:
+                shadowColor ??
+                (LYUtils.kit.isLight(context)
+                    ? Colors.black.withValues(alpha: 0.14)
+                    : Colors.white.withValues(alpha: 0.04)),
             blurRadius: blurRadius,
             spreadRadius: spreadRadius,
             offset: offset,
