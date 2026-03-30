@@ -1,8 +1,9 @@
-## 0.1.18
+## 0.1.19
 
 * add snackbar messager methods.
 * placeholder widget with size property.
 * bordered container.
+* navbar.
 
 ## 0.1.15
 
