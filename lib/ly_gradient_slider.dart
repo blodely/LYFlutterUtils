@@ -7,6 +7,7 @@ class LYGradientSlider extends StatelessWidget {
 
   // CUSTOM SHAPE
   final double height;
+  final List<Color> trackColors;
 
   // BORDER
   final double? borderWidth;
@@ -17,10 +18,17 @@ class LYGradientSlider extends StatelessWidget {
     required this.value,
     required this.onChanged,
 
-    this.height = 12,
+    this.height = 12, // DEFAULT HEIGHT:12
+    this.trackColors = const [
+      Colors.green,
+      Colors.green,
+      Colors.amber,
+      Colors.red,
+      Colors.red,
+    ], // DEFAULT COLOR GRADIENT FROM GREEN TO RED
 
     this.borderWidth = 0,
-    this.borderColor,
+    this.borderColor = Colors.grey,
   });
 
   @override
@@ -29,8 +37,9 @@ class LYGradientSlider extends StatelessWidget {
       data: SliderTheme.of(context).copyWith(
         trackHeight: height,
         trackShape: LYGradientTrackShape(
-          borderColor: Colors.grey.withValues(alpha: 0.618),
-          borderWidth: 1,
+          borderColor: borderColor ?? Colors.grey.withValues(alpha: 0.618),
+          borderWidth: borderWidth ?? 1,
+          trackcolors: trackColors,
         ),
         thumbColor: Colors.white,
         thumbShape: RoundSliderThumbShape(
@@ -57,13 +66,7 @@ class LYGradientTrackShape extends RoundedRectSliderTrackShape {
     this.borderColor = Colors.grey,
     this.borderWidth = 1,
 
-    this.trackcolors = const [
-      Colors.green,
-      Colors.green,
-      Colors.amber,
-      Colors.red,
-      Colors.red,
-    ],
+    this.trackcolors = const [Colors.green, Colors.red],
   });
 
   @override
@@ -149,6 +152,7 @@ class LYGradientTrackShape extends RoundedRectSliderTrackShape {
       );
     }
 
+    /*
     super.paint(
       context,
       offset,
@@ -162,6 +166,7 @@ class LYGradientTrackShape extends RoundedRectSliderTrackShape {
       isEnabled: isEnabled,
       additionalActiveTrackHeight: additionalActiveTrackHeight,
     );
+    */
   }
 
   // REMOVE "PADDING"
