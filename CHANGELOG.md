@@ -1,6 +1,7 @@
-## 0.1.21
+## 0.1.22
 
 * gradient track slider.
+* tabbar dock style.
 
 ## 0.1.19
 
