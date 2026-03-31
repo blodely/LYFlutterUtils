@@ -13,6 +13,7 @@ export 'package:ly_flutter_utils/ly_gradient_slider.dart';
 export 'package:ly_flutter_utils/ly_dot_paper_background.dart';
 export 'package:ly_flutter_utils/ly_glass_container.dart';
 export 'package:ly_flutter_utils/ly_button_bar_macaron.dart';
+export 'package:ly_flutter_utils/ly_avatar.dart';
 
 class LYUtils {
   // Singleton
@@ -49,5 +50,15 @@ extension Screen on LYUtils {
 
   double safeBtm(BuildContext context) {
     return MediaQuery.of(context).padding.bottom;
+  }
+}
+
+extension LYUtilsColor on LYUtils {
+  static Color matchedColor(BuildContext context) {
+    return LYUtils.kit.isLight(context) ? Colors.white : Colors.black;
+  }
+
+  static Color reversedColor(BuildContext context) {
+    return LYUtils.kit.isLight(context) ? Colors.black : Colors.white;
   }
 }
