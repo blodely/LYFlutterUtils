@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ly_flutter_utils/ly_tabbar_dockstyle.dart';
 import 'package:ly_flutter_utils_example/scene/page_control.dart';
 import 'package:ly_flutter_utils_example/scene/page_text.dart';
 
@@ -14,22 +15,21 @@ class _SceneCenterState extends State<SceneCenter> {
 
   // Demo pages
   List<Widget> pages = [PageText(), PageControl()];
-  List<BottomNavigationBarItem> items = [
-    BottomNavigationBarItem(icon: Icon(Icons.text_fields), label: 'text'),
-    BottomNavigationBarItem(
-      icon: Icon(Icons.radio_button_checked),
-      label: 'control',
-    ),
+  List<Icon> items = [
+    Icon(Icons.text_fields),
+    Icon(Icons.radio_button_checked),
   ];
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      extendBody: true,
       body: SafeArea(top: false, bottom: false, child: pages[tabidx]),
-      bottomNavigationBar: BottomNavigationBar(
-        currentIndex: tabidx,
+      bottomNavigationBar: LYTabbarDockstyle(
+        tabIdx: tabidx,
+        horizontalMargin: 30,
         items: items,
-        onTap: (value) {
+        ontap: (value) {
           tabidx = value;
           setState(() {});
         },
