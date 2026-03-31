@@ -1,3 +1,7 @@
+## 0.1.20
+
+* gradient track slider.
+
 ## 0.1.19
 
 * add snackbar messager methods.
