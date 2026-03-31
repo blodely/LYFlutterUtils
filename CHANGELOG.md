@@ -1,7 +1,8 @@
-## 0.1.22
+## 0.1.23
 
 * gradient track slider.
 * tabbar dock style.
+* avatar container.
 
 ## 0.1.19
 
