@@ -9,6 +9,7 @@ export 'package:ly_flutter_utils/ly_placeholder.dart';
 export 'package:ly_flutter_utils/ly_bordered_container.dart';
 export 'package:ly_flutter_utils/ly_navbar_empty.dart';
 export 'package:ly_flutter_utils/ly_title_bar.dart';
+export 'package:ly_flutter_utils/ly_gradient_slider.dart';
 export 'package:ly_flutter_utils/ly_dot_paper_background.dart';
 export 'package:ly_flutter_utils/ly_glass_container.dart';
 export 'package:ly_flutter_utils/ly_button_bar_macaron.dart';
