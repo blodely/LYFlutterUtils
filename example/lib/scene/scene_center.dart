@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:ly_flutter_utils/ly_tabbar_dockstyle.dart';
+import 'package:ly_flutter_utils_example/scene/page_cell.dart';
 import 'package:ly_flutter_utils_example/scene/page_control.dart';
 import 'package:ly_flutter_utils_example/scene/page_text.dart';
 
@@ -14,10 +15,11 @@ class _SceneCenterState extends State<SceneCenter> {
   int tabidx = 0;
 
   // Demo pages
-  List<Widget> pages = [PageText(), PageControl()];
+  List<Widget> pages = [PageText(), PageControl(), PageCell()];
   List<Icon> items = [
     Icon(Icons.text_fields),
     Icon(Icons.radio_button_checked),
+    Icon(Icons.card_giftcard),
   ];
 
   @override
