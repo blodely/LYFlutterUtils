@@ -10,8 +10,8 @@ class LYResApple extends StatelessWidget {
     return GestureDetector(
       onTap: ontap,
       child: Container(
-        width: 109,
-        height: 40,
+        width: 144,
+        height: 48,
         decoration: BoxDecoration(
           color: Colors.black,
           border: Border.all(color: Color(0xffa6a6a6), width: 1),
@@ -25,20 +25,20 @@ class LYResApple extends StatelessWidget {
   static TextStyle titleStyle() {
     return TextStyle(
       color: Colors.white,
-      fontSize: 15,
+      fontSize: 18,
       fontWeight: FontWeight.bold,
-      fontFamily: 'SF Pro',
-      letterSpacing: -1,
+      fontFamily: 'system-ui, -apple-system, BlinkMacSystemFont, SF Pro',
+      letterSpacing: 0,
     );
   }
 
   static TextStyle subtitleStyle() {
     return TextStyle(
       color: Colors.white,
-      fontSize: 8,
+      fontSize: 10,
       fontWeight: FontWeight.bold,
-      fontFamily: 'SF Compact',
-      letterSpacing: -0.3,
+      fontFamily: 'system-ui, -apple-system, BlinkMacSystemFont, SF Compact',
+      letterSpacing: 0,
     );
   }
 }
@@ -57,16 +57,16 @@ class LYResDlAppStore extends StatelessWidget {
             top: 1,
             bottom: 1,
             left: 4,
-            child: Icon(Icons.apple, color: Colors.white, size: 26),
+            child: Icon(Icons.apple, color: Colors.white, size: 34),
           ),
           Positioned(
             top: 5,
-            left: 30,
+            left: 40,
             child: Text('Download on the', style: LYResApple.subtitleStyle()),
           ),
           Positioned(
             bottom: 5,
-            left: 30,
+            left: 40,
             child: Text('App Store', style: LYResApple.titleStyle()),
           ),
         ],

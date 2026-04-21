@@ -14,8 +14,8 @@ class PageControl extends StatelessWidget {
       body: LYDotPaperBackground(
         child: Stack(
           children: [
-            Positioned(top: 100, left: 20, child: LYResDlAppStore()),
             Positioned(top: 150, left: 20, child: LYResDlAppStore()),
+            Positioned(top: 220, left: 20, child: LYResDlAppStore()),
           ],
         ),
       ),
