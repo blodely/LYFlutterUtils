@@ -1,3 +1,7 @@
+## 0.1.24
+
+* download button.
+
 ## 0.1.23
 
 * gradient track slider.
